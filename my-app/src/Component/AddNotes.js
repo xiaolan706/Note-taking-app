@@ -5,9 +5,14 @@ const AddNotes = ({onAdd}) => {
     const [value, setValue] = useState('');
 
     return (
-    <div>
-        <input  value={value} onChange={(e) => setValue(e.target.value)} />
-        <button onClick={() => {
+    <div className='add-note-container'>
+        <input className='add-note'
+            type="text" 
+            placeholder='Add notes here...'
+            value={value} 
+            onChange={(e) => setValue(e.target.value)} />
+        <button className='add-note-btn'
+            onClick={() => {
             onAdd(value);
             setValue('');
         }}>

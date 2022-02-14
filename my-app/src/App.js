@@ -5,7 +5,6 @@ import NoteList from './Component/NoteList';
 function App() {
   const [noteList, setNoteList] = useState([]);
   
-  
   const handleAdd = (content) => {
     const newNote = {
       id: new Date().valueOf(),
@@ -43,9 +42,11 @@ function App() {
   }, [noteList]);
 
   return (
-    <div className="App">
-      <h1>Notes</h1>
-      <AddNotes onAdd={handleAdd}/>
+    <div className="container">
+      <div >
+        <h1 className='header'>Notes</h1>
+        <AddNotes onAdd={handleAdd}/>
+      </div>
       <NoteList 
         noteList={noteList}
         onEdit={handleEdit}

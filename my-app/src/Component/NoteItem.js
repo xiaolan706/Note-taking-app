@@ -6,7 +6,7 @@ function NoteItem({id, content, date, onEdit, onDelete }) {
 
   return (
     <div>
-        <li>
+        <li className='note-item'>
             {editedNoteId === id ? 
                 (<input type="text" value={editedContent} 
                         onChange={(e) => setEditedContent(e.target.value)} 
